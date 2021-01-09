@@ -41,12 +41,12 @@ class TableController < ApplicationController
     id_fri=[]
     id_wed=[]
     id_tue=[]
-    @help = Record.joins(:cached_result)
+    help = Record.joins(:cached_result)
 
     CachedResult.all.each do |inst|
       if inst.day == "Fri"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_fri<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_fri<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -57,7 +57,7 @@ class TableController < ApplicationController
       end
       if inst.day == "Sat"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_sat<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_sat<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -68,7 +68,7 @@ class TableController < ApplicationController
       end
       if inst.day == "Mon"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_mon<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_mon<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -79,7 +79,7 @@ class TableController < ApplicationController
       end
       if inst.day == "Tue"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_tue<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_tue<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -90,7 +90,7 @@ class TableController < ApplicationController
       end
       if inst.day == "Wed"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_wed<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_wed<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -101,7 +101,7 @@ class TableController < ApplicationController
       end
       if inst.day == "Thu"
         if input_day==nil
-          if @help.where(:cached_results=>{:id=>inst.id}).first.nil?
+          if help.where(:cached_results=>{:id=>inst.id}).first.nil?
             id_thu<<[inst.time,inst.name,inst.profession,inst.cabinet,inst.id]
           else
             id_thu<<[inst.time,inst.name,inst.profession,inst.cabinet,-1]
@@ -123,8 +123,6 @@ class TableController < ApplicationController
     @id_sat=id_tue.sort_by{ |a| a.first.to_i }
     @id_fri=id_fri.sort_by{ |a| a.first.to_i }
     @id_tue=id_sat.sort_by{ |a| a.first.to_i }
-    @help = Record.joins(:cached_result)
-    @help.where(:cached_results=>{:id=>"2"}).first
   end
 
   def cached
@@ -184,3 +182,4 @@ class TableController < ApplicationController
     end
   end
 end
+
