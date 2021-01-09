@@ -1,0 +1,49 @@
+<style>
+.con{
+    font-family:  "Lohit Tamil Classical";
+    font-size: 15px;
+}
+.xet{
+    font-family:  "Lohit Tamil Classical";
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.10);
+}
+.te{
+    font-family:  "Lohit Tamil Classical";
+    font-size: 27px;
+}
+form{
+    font-family:  Arial, Helvetica, sans-serif;
+
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.10);
+}
+
+</style>
+
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2>1 <%=t("item.err_one") %></h2>
+
+      <ul>
+        <li><%= t("item.err_two") %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" >
+    <%= form.text_field :username,:class=>"form-control",placeholder: t("item.name") %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :password,:class=>"form-control",placeholder: t("item.password") %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t("item.create"), :class=>"form-control" %>
+  </div>
+
+<% end %>

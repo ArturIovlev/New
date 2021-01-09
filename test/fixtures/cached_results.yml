@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  profession: MyString
+  day: MyString
+  time: MyString
+  cabinet: 1
+
+two:
+  name: MyString
+  profession: MyString
+  day: MyString
+  time: MyString
+  cabinet: 1

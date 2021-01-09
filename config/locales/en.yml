@@ -1,0 +1,86 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  item:
+    name: "Name"
+    password: "Password"
+    login: "Login"
+    registration: "Registration"
+    polyclinic: "Polyclinic"
+    back: "Back"
+    cang_info: "Change information"
+    users: "Users"
+    last_login_at: "Last login at"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    mas_one: ", you could change your name or password "
+    mas_two: "or login "
+    here: "here"
+    logout: "logout"
+    view_all: "View all records"
+    view_my: "View my records"
+    admin_page: "Admin page"
+    find_appoint: "Find appointment"
+    profession: "Profession"
+    find: "Find"
+    time: "Time"
+    cabinet: "Cabinet"
+    mon: "Mon"
+    to_make: "To make an appointment"
+    delete: "Delete"
+    tue: "Tue"
+    wed: "Wed"
+    thu: "Thu"
+    fri: "Fri"
+    sat: "Sat"
+    day: "Day"
+    you_have: "You have no appointment"
+    input_name: "Input name:"
+    input_profession: "Input profession:"
+    input_day: "Input day:"
+    input_time: "Input time:"
+    input_cabinet: "Input cabinet:"
+    entr_info: "Enter information"
+    tab_db: "Table DB"
+    app_db: "Appointment DB"
+    show_all_users: "Show all users"
+    err_one: "prohibited this user from being saved:"
+    err_two: "Entre password"
+    create: "Create"
+    notice: "Successfully registration"
+    my: "My appointments"
+    can: "Cancel appointment"
+    find_app: "Find appointment"
+    not: "Appointment not found"
+
+
