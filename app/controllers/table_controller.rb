@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# controller for main calculations
 class TableController < ApplicationController
   def input
     if (params[:nik]!=nil)
@@ -24,7 +27,6 @@ class TableController < ApplicationController
       unless Record.find_by(cached_result_id: del).nil?
         Record.find_by(cached_result_id: del).destroy
       end
-      del=nil
     end
     if input_name!=nil and input_prof!=nil and input_time!=nil and input_day!=nil and input_day!=""
       cached_result = CachedResult.new
@@ -149,7 +151,6 @@ class TableController < ApplicationController
     del=params[:del]
     if del!=nil
       Record.find_by(cached_result_id: del).destroy
-      del=nil
     end
     @array=[]
     id=params[:res]
