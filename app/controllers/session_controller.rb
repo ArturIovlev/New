@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# controller for sessions login
 class SessionController < ApplicationController
   skip_before_action :require_login, only: %i[login create]
 
